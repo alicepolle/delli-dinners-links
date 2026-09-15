@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="DELLI" />
+  <title>DELLI</title>
+  <meta name="description" content="DELLI AI, DELLI Growth, and a way to get in touch." />
+  <meta property="og:title" content="DELLI" />
+  <meta property="og:description" content="DELLI AI, DELLI Growth, and a way to get in touch." />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f2f2f7;
+      --group: #ffffff;
+      --label: #000000;
+      --secondary: rgba(60, 60, 67, 0.6);
+      --separator: rgba(60, 60, 67, 0.29);
+      --chevron: #c7c7cc;
+      --row-active: rgba(0, 0, 0, 0.08);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --group: #1c1c1e;
+        --label: #ffffff;
+        --secondary: rgba(235, 235, 245, 0.6);
+        --separator: rgba(84, 84, 88, 0.65);
+        --chevron: #636366;
+        --row-active: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--label);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100dvh;
+      padding:
+        calc(var(--safe-top) + 36px)
+        0
+        calc(var(--safe-bottom) + 32px);
+    }
+
+    .page {
+      width: min(100%, 430px);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      padding: 8px 0 36px;
+    }
+
+    .logo {
+      display: block;
+      width: 148px;
+      height: auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .logo { filter: invert(1); }
+    }
+
+    section + section {
+      margin-top: 28px;
+    }
+
+    h2 {
+      margin: 0 16px 7px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--secondary);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: var(--group);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 44px;
+      padding: 11px 16px;
+      color: var(--label);
+      text-decoration: none;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: -0.41px;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      position: relative;
+    }
+
+    a:active {
+      background: var(--row-active);
+    }
+
+    li:not(:last-child) a::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--separator);
+      transform: scaleY(0.5);
+      transform-origin: bottom;
+      pointer-events: none;
+    }
+
+    .chevron {
+      flex: 0 0 auto;
+      width: 7px;
+      height: 12px;
+      color: var(--chevron);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="brand">
+      <img class="logo" src="logo.svg" alt="DELLI" />
+    </header>
+
+    <section>
+      <h2>DELLI AI</h2>
+      <ul>
+        <li>
+          <a href="https://delli.ai/" target="_blank" rel="noopener noreferrer">
+            <span>Find out more</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://delli-interactive-demo.plyo.dev/#/orders" target="_blank" rel="noopener noreferrer">
+            <span>Try the interactive demo</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>DELLI Growth</h2>
+      <ul>
+        <li>
+          <a href="https://delli-growth-deck.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <span>Find out more</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://growth.delli.com/signin" target="_blank" rel="noopener noreferrer">
+            <span>Try it for free</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Chat with me</h2>
+      <ul>
+        <li>
+          <a href="https://calendly.com/alice-delli/delli-demo-call-event" target="_blank" rel="noopener noreferrer">
+            <span>Book a time</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:alice@delli.com">
+            <span>Email me</span>
+            <svg class="chevron" viewBox="0 0 7 12" aria-hidden="true">
+              <path d="M1.25 1.25 5.75 6l-4.5 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
