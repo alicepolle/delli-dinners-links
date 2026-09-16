@@ -22,6 +22,8 @@
       --primary: #007aff;
       --primary-text: #ffffff;
       --secondary-fill: rgba(120, 120, 128, 0.16);
+      --secondary-label: rgba(60, 60, 67, 0.6);
+      --workshop: #dcd400;
       --safe-top: env(safe-area-inset-top, 0px);
       --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
@@ -32,6 +34,7 @@
         --label: #ffffff;
         --primary: #0a84ff;
         --secondary-fill: rgba(120, 120, 128, 0.32);
+        --secondary-label: rgba(235, 235, 245, 0.6);
       }
     }
 
@@ -83,12 +86,20 @@
     }
 
     h2 {
-      margin: 0 4px 12px;
+      margin: 0 4px 4px;
       font-size: 22px;
       font-weight: 700;
       line-height: 28px;
       letter-spacing: 0.35px;
       color: var(--label);
+    }
+
+    .lede {
+      margin: 0 4px 12px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--secondary-label);
     }
 
     .actions {
@@ -127,6 +138,12 @@
       background: var(--secondary-fill);
       color: var(--label);
     }
+
+    .workshop {
+      background: var(--workshop);
+      color: #000000;
+      margin-bottom: 36px;
+    }
   </style>
 </head>
 <body>
@@ -135,8 +152,11 @@
       <img class="logo" src="logo.svg" alt="DELLI" />
     </header>
 
+    <a class="workshop" href="https://luma.com/pl50fa7b" target="_blank" rel="noopener noreferrer">Join our free AI workshop</a>
+
     <section>
       <h2>DELLI AI</h2>
+      <p class="lede">The teammate who runs your wholesale.</p>
       <div class="actions">
         <a class="primary" href="https://delli-interactive-demo.plyo.dev/#/orders" target="_blank" rel="noopener noreferrer">Try the interactive demo</a>
         <a class="secondary" href="https://delli.ai/" target="_blank" rel="noopener noreferrer">Find out more</a>
@@ -145,6 +165,7 @@
 
     <section>
       <h2>DELLI Growth</h2>
+      <p class="lede">Know who to sell to next.</p>
       <div class="actions">
         <a class="primary" href="https://growth.delli.com/signin" target="_blank" rel="noopener noreferrer">Try it for free</a>
         <a class="secondary" href="https://delli-growth-deck.vercel.app/" target="_blank" rel="noopener noreferrer">Find out more</a>
@@ -153,6 +174,7 @@
 
     <section>
       <h2>DELLI Market</h2>
+      <p class="lede">Get discovered by independent food buyers.</p>
       <div class="actions">
         <a class="primary" href="https://www.delli.market/pages/sell-with-delli" target="_blank" rel="noopener noreferrer">List for free</a>
       </div>
