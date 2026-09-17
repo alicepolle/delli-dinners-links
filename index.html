@@ -152,14 +152,14 @@
       <img class="logo" src="logo.svg" alt="DELLI" />
     </header>
 
-    <a class="workshop" href="https://luma.com/pl50fa7b" target="_blank" rel="noopener noreferrer">Join our free AI workshop</a>
+    <a class="workshop" href="https://luma.com/pl50fa7b" target="_blank" rel="noopener noreferrer" data-event="Workshop">Join our free AI workshop</a>
 
     <section>
       <h2>DELLI AI</h2>
       <p class="lede">The teammate who runs your wholesale.</p>
       <div class="actions">
-        <a class="primary" href="https://delli-interactive-demo.plyo.dev/#/orders" target="_blank" rel="noopener noreferrer">Try the interactive demo</a>
-        <a class="secondary" href="https://delli.ai/" target="_blank" rel="noopener noreferrer">Find out more</a>
+        <a class="primary" href="https://delli-interactive-demo.plyo.dev/#/orders" target="_blank" rel="noopener noreferrer" data-event="AI demo">Try the interactive demo</a>
+        <a class="secondary" href="https://delli.ai/" target="_blank" rel="noopener noreferrer" data-event="AI more">Find out more</a>
       </div>
     </section>
 
@@ -167,8 +167,8 @@
       <h2>DELLI Growth</h2>
       <p class="lede">Find your next stockists.</p>
       <div class="actions">
-        <a class="primary" href="https://growth.delli.com/signin" target="_blank" rel="noopener noreferrer">Try it for free</a>
-        <a class="secondary" href="https://delli-growth-deck.vercel.app/" target="_blank" rel="noopener noreferrer">Find out more</a>
+        <a class="primary" href="https://growth.delli.com/signin" target="_blank" rel="noopener noreferrer" data-event="Growth trial">Try it for free</a>
+        <a class="secondary" href="https://delli-growth-deck.vercel.app/" target="_blank" rel="noopener noreferrer" data-event="Growth more">Find out more</a>
       </div>
     </section>
 
@@ -176,17 +176,26 @@
       <h2>DELLI Market</h2>
       <p class="lede">Get discovered by independent food buyers.</p>
       <div class="actions">
-        <a class="primary" href="https://www.delli.market/pages/sell-with-delli" target="_blank" rel="noopener noreferrer">List for free</a>
+        <a class="primary" href="https://www.delli.market/pages/sell-with-delli" target="_blank" rel="noopener noreferrer" data-event="Market list">List for free</a>
       </div>
     </section>
 
     <section>
       <h2>Chat with me</h2>
       <div class="actions">
-        <a class="primary" href="https://calendly.com/alice-delli/delli-demo-call-event" target="_blank" rel="noopener noreferrer">Book a time</a>
-        <a class="secondary" href="mailto:alice@delli.com">Email me</a>
+        <a class="primary" href="https://calendly.com/alice-delli/delli-demo-call-event" target="_blank" rel="noopener noreferrer" data-event="Book a time">Book a time</a>
+        <a class="secondary" href="mailto:alice@delli.com" data-event="Email">Email me</a>
       </div>
     </section>
   </main>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a[data-event]');
+      if (!link) return;
+      window.va('event', { name: 'Click', data: { link: link.getAttribute('data-event') } });
+    });
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
